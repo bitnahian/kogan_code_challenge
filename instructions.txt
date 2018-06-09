@@ -10,7 +10,10 @@ The user will only need to grant permissions to run the shell script.
 
 Otherwise, the user can manually do the following:
 
-  source env/bin/activate 
+  virtualenv env
+  source env/bin/activate
+  pip install -r requirements.txt
   python solution.py
+  deactivate
 
 I hope that you like my solution. Many thanks! 
