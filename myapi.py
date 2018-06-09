@@ -22,7 +22,7 @@ class API_Caller:
     def __init__(self, category, next_page = "1"):
         self.category = category
         self.item_count = 0
-        self.next_page = "1"
+        self.next_page = next_page
     
     ## The iterator
     def __iter__(self):
