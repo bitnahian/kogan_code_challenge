@@ -11,4 +11,4 @@ def calculate_average_volume(category, first_page = "1"):
 
 if __name__ in "__main__":
     
-    print("The average volume of all Air Conditioners is {:.3f}".format(calculate_average_volume("Air Conditioners")))
+    print("The average volume of all Air Conditioners is {:.4f}".format(calculate_average_volume("Air Conditioners")))

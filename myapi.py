@@ -34,7 +34,7 @@ class API_Caller:
 
     ## The __callAPI method is used to calculate the sum of the volume from the  next page
     def __callAPI(self):
-        r = requests.get("{}{}".format(API_LINK, self.next_page))
+        r = requests.get("{}{}".format(self.API_LINK, self.next_page))
         contents = r.json() # Convert to JSON
         objects = contents['objects']
         # Set next_page to relevant value, None otherwise
