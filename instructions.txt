@@ -1,0 +1,16 @@
+Author: Nahian-Al Hasan
+Email:  nahian97@gmail.com
+
+Language: Python 3.6.5, Shell (optional) 
+
+I have added a shell script which will automatically run the virtual environment
+and execute the python script. 
+
+The user will only need to grant permissions to run the shell script. 
+
+Otherwise, the user can manually do the following:
+
+  source env/bin/activate 
+  python solution.py
+
+I hope that you like my solution. Many thanks! 
