@@ -3,14 +3,16 @@ Email:  nahian97@gmail.com
 
 Language: Python 3.6.5, Shell (optional) 
 
+The user needs to create a virtual environment first.
+  
+  virtualenv env
+
 I have added a shell script which will automatically run the virtual environment
 and execute the python script. 
 
-The user will only need to grant permissions to run the shell script. 
+The user will only need to grant permissions to run the shell script. If
+a shell is not available, the user can manually run the following:
 
-Otherwise, the user can manually do the following:
-
-  virtualenv env
   source env/bin/activate
   pip install -r requirements.txt
   python solution.py
