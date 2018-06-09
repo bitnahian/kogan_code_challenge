@@ -9,7 +9,7 @@ import json
 
 ## Awesome API caller that can iterate over pages returned by the API call
 #
-#  Calculates the total volume for the given category in each page
+#  Calculates the total cubic weight sum for the given category in each page
 #  API_LINK : http://wp8m3he1wt.s3-website-ap-southeast-2.amazonaws.com/api/products/
 class API_Caller:
 
@@ -44,14 +44,16 @@ class API_Caller:
         objects = contents['objects']
         # Set next_page to relevant value, None otherwise
         self.next_page = contents['next'][-1] if contents['next'] is not None else None
-        volume_sum = 0
+        cubic_weight_sum = 0
         for item in objects:
             if item['category'] == self.category:
                 self.item_count += 1
                 size = item['size']
                 # Calculate volume of item and add to sum
-                volume_sum += size['width']*size['length']*size['height']
-        return volume_sum
+                ratio = 1/1000000
+                volume = size['width']*size['length']*size['height']*ratio # Convert to m^3
+                cubic_weight_sum += volume * item['weight']
+        return cubic_weight_sum
 
     ## @var item_count
     #  A member variable that keeps number of items encountered
