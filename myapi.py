@@ -1,3 +1,9 @@
+## @package myapi
+#  This module contains the implementation of API_Caller
+#
+#  author: Nahian-Al Hasan
+
+
 import requests 
 import json
 
@@ -5,7 +11,6 @@ import json
 #
 #  Calculates the total volume for the given category in each page
 #  API_LINK : http://wp8m3he1wt.s3-website-ap-southeast-2.amazonaws.com/api/products/
-
 class API_Caller:
 
     ## class variable API_LINK - The link for which the API will be called
@@ -47,4 +52,10 @@ class API_Caller:
                 # Calculate volume of item and add to sum
                 volume_sum += size['width']*size['length']*size['height']
         return volume_sum
+
+    ## @var item_count
+    #  A member variable that keeps number of items encountered
+    
+    ## @var next_page
+    #  A member variable that keeps track of the next page the API should call
 
